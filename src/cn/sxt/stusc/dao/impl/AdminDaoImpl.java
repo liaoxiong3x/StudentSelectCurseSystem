@@ -37,14 +37,14 @@ public class AdminDaoImpl implements AdminDao{
 			if (resultSet.next()) {
 				admin.setUserID(resultSet.getString("USERID"));
 				admin.setUsername(resultSet.getString("USERNAME"));
-				admin.setPassword(resultSet.getString("PASSWORLD"));
+				admin.setPassword(resultSet.getString("PASSWORD"));
 				admin.setScore(resultSet.getDouble("score"));
 				admin.setHobby(resultSet.getString("HOBBY"));
 				admin.setEnterDate(resultSet.getDate("enterDate"));
 				admin.setAge(resultSet.getInt("AGE"));
 			}
 		} catch (SQLException e) {
-			
+//			e.fillInStackTrace();
 		}finally{
 			DBUtil.closeAll(connection, ps, resultSet);
 		}

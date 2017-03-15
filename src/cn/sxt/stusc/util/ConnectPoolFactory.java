@@ -1,10 +1,13 @@
 package cn.sxt.stusc.util;
+
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.util.Properties;
 
 import org.logicalcobwebs.proxool.configuration.PropertyConfigurator;
+
+
 
 public class ConnectPoolFactory {
 
@@ -21,7 +24,7 @@ public class ConnectPoolFactory {
 			properties.load(is);
 			PropertyConfigurator.configure(properties);
 		} catch (Exception e) {
-			e.printStackTrace();
+//			e.printStackTrace();
 		}
 	}
 	
@@ -40,7 +43,7 @@ public class ConnectPoolFactory {
 			Class.forName("org.logicalcobwebs.proxool.ProxoolDriver");
 			conn = DriverManager.getConnection("proxool.test");
 		} catch (Exception e) {
-			e.printStackTrace();
+//			e.printStackTrace();
 		}
 		return conn;
 	}

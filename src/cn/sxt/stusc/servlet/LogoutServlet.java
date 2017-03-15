@@ -13,9 +13,9 @@ public class LogoutServlet extends HttpServlet {
 			throws ServletException, IOException {
 		
 		req.getSession().invalidate();
-//		req.getSession().removeValue("username");
-		
-		resp.sendRedirect("../admin/MyJsp.jsp");
+		req.getSession().removeAttribute("admin");;
+		req.getRequestDispatcher("/Login.jsp").forward(req, resp);
+//		resp.sendRedirect("../admin/login.jsp");
 	}
 	
 	@Override
