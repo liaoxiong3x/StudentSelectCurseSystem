@@ -42,6 +42,55 @@ public class Student {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	public int getsNO() {
+		return sNO;
+	}
+	public void setsNO(int sNO) {
+		this.sNO = sNO;
+	}
+	public String getPwd() {
+		return pwd;
+	}
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+	public String getsName() {
+		return sName;
+	}
+	public void setsName(String sName) {
+		this.sName = sName;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public char getGender() {
+		return gender;
+	}
+	public void setGender(char gender) {
+		this.gender = gender;
+	}
+	public Date getBirth() {
+		return birth;
+	}
+	public void setBirth(Date birth) {
+		this.birth = birth;
+	}
+	public String getClassNO() {
+		return classNO;
+	}
+	public void setClassNO(String classNO) {
+		this.classNO = classNO;
+	}
+	public String getRemark() {
+		return remark;
+	}
+	public void setRemark(String remark) {
+		this.remark = remark;
+	}
 	/*
 	 * 重写toString方法
 	 * @see java.lang.Object#toString()

@@ -11,17 +11,14 @@ public class LogoutServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		
 		req.getSession().invalidate();
 		req.getSession().removeAttribute("admin");;
 		req.getRequestDispatcher("/Login.jsp").forward(req, resp);
-//		resp.sendRedirect("../admin/login.jsp");
 	}
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		
 		this.doGet(req, resp);
 	}
 }

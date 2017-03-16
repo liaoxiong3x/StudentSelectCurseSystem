@@ -52,29 +52,28 @@ public class AdminDaoImpl implements AdminDao{
 	}
 	@Override
 	public int saveAdmin(Admin admin) {
-		admin = new Admin();
 		//创建连接
 		Connection connection = null;
 		//建立命令发射器
 		PreparedStatement ps = null;
 		//创建sql语句
-		String sql = "insert into admin values(?,?,?,?,?,?,?,?)";
+		String sql = "insert into t_admin values(?,?,?,?,?,?,?)";
 		//发送命令并去的结果
 		ResultSet resultSet = null;
 		int flag = 0;
 		try {
 			connection = DBUtil.getConn();
 			ps = DBUtil.getPreparedStatement(connection, sql);
-			ps.setString(1, admin.getUsername());
+			ps.setString(1, admin.getUserID());
 			ps.setString(2, admin.getUsername());
 			ps.setString(3, admin.getPassword());
 			ps.setInt(4, admin.getAge());
 			ps.setDouble(5, admin.getScore());
 			ps.setDate(6, new java.sql.Date(admin.getEnterDate().getTime()));
-			ps.setString(7, String.valueOf(admin.getHobby()));
+			ps.setString(7, admin.getHobby());
 			flag = ps.executeUpdate();
 		} catch (SQLException e) {
-//			e.
+			e.printStackTrace();
 		}finally{
 			DBUtil.closeAll(connection, ps, resultSet);
 		}

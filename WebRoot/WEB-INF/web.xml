@@ -32,10 +32,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
 	</servlet-mapping>
 
   
-  <servlet>
-    <servlet-name>RegisterServlet</servlet-name>
-    <servlet-class>cn.sxt.stusc.servlet.RegisterServlet</servlet-class>
-  </servlet>
+  
   <servlet>
     <servlet-name>adminInformationServlet</servlet-name>
     <servlet-class>cn.sxt.stusc.servlet.adminInformationServlet</servlet-class>
@@ -49,15 +46,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
     <servlet-class>cn.sxt.stusc.servlet.UserServlet</servlet-class>
   </servlet>
 
-
-
-
   
-  
-  <servlet-mapping>
-    <servlet-name>RegisterServlet</servlet-name>
-    <url-pattern>/servlet/RegisterServlet</url-pattern>
-  </servlet-mapping>
   <servlet-mapping>
     <servlet-name>adminInformationServlet</servlet-name>
     <url-pattern>/servlet/adminInformationServlet</url-pattern>
